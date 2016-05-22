@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<!-- In: conf/mapred-site.xml -->
+<property>
+  <!--name>mapred.job.tracker</name-->
+  <name>mapreduce.jobtracker.address</name>
+  <value>nimbus-head:54311</value>
+  <description>The host and port that the MapReduce job tracker runs
+  at.  If "local", then jobs are run in-process as a single map
+  and reduce task.
+  </description>
+</property>
+<property>
+ <name>mapreduce.framework.name</name>
+ <value>yarn</value>
+ <description>The framework for running mapreduce jobs</description>
+</property>
+<!--property>
+  <name>mapreduce.job.maps</name>
+  <value>8</value>
+  <description>no tasktrackers for the mast node
+  </description>
+</property>
+<property>
+  <name>mapreduce.job.reduces</name>
+  <value>6</value>
+  <description>unavailable
+  </description>
+</property-->
+<property>
+  <name>mapreduce.map.memory.mb</name>
+  <value>2048</value>
+</property>
+<property>
+  <name>mapreduce.reduce.memory.mb</name>
+  <value>4096</value>
+</property>
+<!--property>
+  <name>mapred.child.java.opts</name>
+  <value>
+  </value>
+</property-->
+<property>
+  <name>mapreduce.map.java.opts</name>
+  <value>-Xmx1500m</value>
+</property>
+<property>
+  <name>mapreduce.reduce.java.opts</name>
+  <value>-Xmx3500m</value>
+</property>
+<!--property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx1024m</value>
+</property-->
+<!--property>
+  <name>mapreduce.map.java.opts</name>
+  <value>
+     -Xmx200m
+  </value>
+</property>
+<property>
+  <name>mapreduce.reduce.java.opts</name>
+  <value>
+     -Xmx200m
+  </value>
+</property-->
+</configuration>
